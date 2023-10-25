@@ -14,9 +14,14 @@ elementoMaiorValor.innerHTML = maiorValor;
 
 
 
-function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * maiorValor + 1);
-}
+// function gerarNumeroAleatorio() {
+//     return parseInt(Math.random() * maiorValor + 1);
+// }
 
+function gerarNumeroAleatorio() {
+    const intervalo = maiorValor - menorValor + 1;
+    const probabilidade = Math.random() * intervalo;
+    return Math.floor(probabilidade) + menorValor;
+}
 
 
